@@ -19,6 +19,7 @@ def create():
 # ! READ / RETRIEVE
 
 @app.route('/')
+@app.route('/things')
 def index():
     return render_template('index.html', things = Thing.get_all())
 
